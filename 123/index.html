@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海贼王粉丝页面</title>
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- 引入粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- 视频背景 -->
+    <div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="videos/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- 粒子效果 -->
+    <div id="particles-js"></div>
+    
+    <header class="parallax">
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <h1>欢迎来到海贼王粉丝页面</h1>
+    </header>
+    <main>
+        <!-- 介绍部分 -->
+        <section id="intro" class="parallax">
+            <h2>介绍</h2>
+            <p>欢迎来到终极海贼王粉丝页面！在这里你可以找到关于路飞和他的船员们的一切冒险信息。</p>
+        </section>
+
+        <!-- Swiper 图片轮播部分 -->
+        <section id="swiper-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/slide1.jpg" alt="幻灯片1"></div>
+                    <div class="swiper-slide"><img src="images/slide2.jpg" alt="幻灯片2"></div>
+                    <div class="swiper-slide"><img src="images/slide3.jpg" alt="幻灯片3"></div>
+                    <div class="swiper-slide"><img src="images/slide4.jpg" alt="幻灯片4"></div>
+                    <div class="swiper-slide"><img src="images/slide5.jpg" alt="幻灯片5"></div>
+                </div>
+                <!-- Swiper分页 -->
+                <div class="swiper-pagination"></div>
+                <!-- Swiper导航按钮 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- 画廊部分 -->
+        <section id="gallery">
+            <h2>画廊</h2>
+            <div class="gallery-container">
+                <!-- 画廊项目将放在这里 -->
+            </div>
+        </section>
+        
+        <!-- 视频部分 -->
+        <section id="video">
+            <h2>开端</h2>
+            <div class="video-container">
+                <video width="560" height="315" controls>
+                    <source src="videos/one_piece_latest_episode.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+        </section>
+        
+        <!-- 主要人物部分 -->
+        <section id="characters">
+            <h2>主要人物</h2>
+            <div class="characters-container">
+                <!-- 路飞 -->
+                <div class="character-item" data-aos="fade-up" data-name="路飞" data-description="蒙奇·D·路飞是草帽海贼团的船长，梦想成为海贼王。" data-img="images/luffy.jpg">
+                    <img src="images/luffy.jpg" alt="路飞" class="character-img">
+                    <h3>路飞</h3>
+                </div>
+                <!-- 佐罗 -->
+                <div class="character-item" data-aos="fade-up" data-name="佐罗" data-description="罗罗诺亚·佐罗是草帽海贼团的剑士，目标是成为世界上最强的剑士。" data-img="images/zoro.jpg">
+                    <img src="images/zoro.jpg" alt="佐罗" class="character-img">
+                    <h3>佐罗</h3>
+                </div>
+                <!-- 娜美 -->
+                <div class="character-item" data-aos="fade-up" data-name="娜美" data-description="娜美是草帽海贼团的航海士，梦想绘制出一张完整的世界地图。" data-img="images/nami.jpg">
+                    <img src="images/nami.jpg" alt="娜美" class="character-img">
+                    <h3>娜美</h3>
+                </div>
+                <!-- 山治 -->
+                <div class="character-item" data-aos="fade-up" data-name="山治" data-description="山治是草帽海贼团的厨师，追求传说中的All Blue。" data-img="images/sanji.jpg">
+                    <img src="images/sanji.jpg" alt="山治" class="character-img">
+                    <h3>山治</h3>
+                </div>
+                <!--罗宾 -->
+                <div class="character-item" data-aos="fade-up" data-name="罗宾" data-description="妮可·罗宾是草帽海贼团的考古学家，目标是找到真正的历史正文，绝不饶恕践踏历史文物的人。" data-img="images/chopper.jpg">
+                    <img src="images/chopper.jpg" alt="罗宾" class="character-img">
+                    <h3>罗宾</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 海贼王粉丝专页</p>
+    </footer>
+    <!-- 图片模态框 -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <!-- 角色模态框 -->
+    <div id="characterModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content" id="characterContent">
+            <img id="characterImg" src="" alt="">
+            <h2 id="characterName"></h2>
+            <p id="characterDescription"></p>
+        </div>
+    </div>
+    <!-- 引入AOS动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- 引入自定义脚本 -->
+    <script src="script.js"></script>
+    <!-- 初始化粒子效果 -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+    <!-- 引入Swiper图片轮播库并初始化 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 互动科技网页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <h1>联系我们</h1>
+    </header>
+    <main>
+        <section id="contact">
+            <h2>保持联系</h2>
+            <form id="contactForm">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">电子邮件:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">留言:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">提交</button>
+            </form>
+        </section>
+        <section id="faq">
+            <h2>常见问题</h2>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <h3>你们的服务是关于什么的？</h3>
+                    <p>我们的服务提供XYZ解决方案，帮助您实现ABC。</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <h3>如何联系你们？</h3>
+                    <p>您可以通过上面的表单或发送电子邮件至example@example.com与我们联系。</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <h3>你们的工作时间是？</h3>
+                    <p>我们的工作时间是周一至周五，上午9点到下午5点。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 海贼王粉丝专页</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
